@@ -1,0 +1,12 @@
+<h1>Listado de alumnos:</h1>
+<hr>
+<ul>
+
+    <li *ngFor="let alumno of alumnos"> 
+        
+        {{ alumno.nombre }} - turno: {{ alumno.turno }} - calificacion: 
+        <span [ngClass]="alumno.calificacion > 5 ? 'text-success' : 'text-danger'">{{ alumno.calificacion }}</span>
+
+    </li>
+
+</ul>
